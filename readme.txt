@@ -5,6 +5,23 @@ edit nginx_dru8.conf
 root /home/ubuntu/workspace/drupal-8.1.4;
 
 https://ngfpm-deng3h.c9users.io:8080
+https://ngfpm-deng3h.c9users.io/core/install.php
+
+in the 1st installation, web page hanged at step "install site"
+--> lemp stop
+change nginx_dru8.conf slightly --> site/files ...
+
+--> mysql -udeng3h
+drop database dru8
+create and grant again
+
+mysql> create database dru8 DEFAULT CHARACTER SET = 'utf8mb4' DEFAULT COLLATE 'utf8mb4_unicode_ci';
+mysql> grant all on dru8.* to 'dru8user0'@'%' identified by 'dru8pass0';
+
+--> lemp start
+https://ngfpm-deng3h.c9users.io  --> error, seems run index.php instead of core/install.php
+https://ngfpm-deng3h.c9users.io/core/install.php
+
 
 
 //=== https://github.com/GabrielGil/c9-lemp
