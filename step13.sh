@@ -20,10 +20,10 @@ sudo service nginx stop
 # set up the try_url thing (Drupal is not Worpress)...
 # Thankfully, I already modified this in the repo!
 # sudo wget https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/c9 --output-document=/etc/nginx/sites-available/c9
-nginx_site_c9=/etc/nginx/sites-available/c9
-sudo cp ~/workspace/nginx_c9.conf $nginx_site_c9
-sudo chmod 755 $nginx_site_c9
-sudo ln -s $nginx_site_c9 /etc/nginx/sites-enabled/c9
+nginx_site_dru8=/etc/nginx/sites-available/dru8
+sudo cp ~/workspace/nginx_dru8.conf $nginx_site_dru8
+sudo chmod 755 $nginx_site_dru8
+sudo ln -s $nginx_site_dru8 /etc/nginx/sites-enabled/dru8
 
 
 # PHP:
